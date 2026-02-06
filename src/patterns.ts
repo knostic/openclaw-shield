@@ -42,8 +42,9 @@ export const PII_PATTERNS: NamedPattern[] = [
 // ============================================================================
 // Destructive Command Pattern
 // ============================================================================
+// NOTE: dd patterns should catch both "dd if=/..." and variants with spaces around '='.
 
-export const DEFAULT_DESTRUCTIVE_CMD = /\b(rm|rmdir|unlink|del|format|mkfs|dd\s+if=)\b/;
+export const DEFAULT_DESTRUCTIVE_CMD = /\b(rm|rmdir|unlink|del|format|mkfs)\b|\bdd\s+if\s*=/;
 
 // ============================================================================
 // Sensitive File Patterns
